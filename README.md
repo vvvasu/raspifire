@@ -206,3 +206,6 @@ In addition to the above rules, the firewall allows access to any connections be
 ![Ping from Blue Interface](https://github.com/vvvasu/raspifire/blob/main/ping-from-kali@kali-1.png)
 
 
+*Written by Vasu* 
+
+
