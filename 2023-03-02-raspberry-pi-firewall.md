@@ -1,6 +1,6 @@
 ---
-title: Raspberry Pi Firewall
-author: Vishwa Vasu
+## Raspberry Pi Firewall
+*vasu@vdefense.tech*
 ---
 
 This blog is based on my project for my bachelor's degree back in 2019.
