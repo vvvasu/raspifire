@@ -85,7 +85,7 @@ Raspberry Pi does not have a real-time clock because it doesn&#8217;t have a bac
 
 ## Network Architecture
 
-<img loading="lazy" decoding="async" width="711" height="441" src="https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup.png" alt="Network Setup" class="wp-image-282" srcset="[https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup.png ](https://github.com/vvvasu/raspifire/blob/main/Network-Setup-300x186.png) 711w, [https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup-300x186.png](https://github.com/vvvasu/raspifire/blob/main/Network-Setup-300x186.png) 300w" sizes="(max-width: 711px) 100vw, 711px" /> </figure> 
+<img loading="lazy" decoding="async" width="711" height="441" src="https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup.png" alt="Network Setup" class="wp-image-282" srcset="https://github.com/vvvasu/raspifire/blob/main/Network-Setup-300x186.png 711w, https://github.com/vvvasu/raspifire/blob/main/Network-Setup-300x186.png 300w" sizes="(max-width: 711px) 100vw, 711px" /> </figure> 
 
 ## Installation Process
 
