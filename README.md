@@ -6,7 +6,7 @@
 
 This blog is based on my project for my bachelor's degree back in 2019.
 
-The solution I present here is ideal for individuals who value their information security (home users) and small-scale businesses.
+The solution I present here is ideal for individuals who value their information security.
 
 Before we begin, let's look at what a firewall is.
 
