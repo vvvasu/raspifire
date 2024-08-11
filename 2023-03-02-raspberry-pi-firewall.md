@@ -1,28 +1,8 @@
 ---
 title: Raspberry Pi Firewall
 author: Vishwa Vasu
-type: post
-date: 2023-03-02T21:22:36+00:00
-url: /raspberry-pi-firewall/
-featured_image: /wp-content/uploads/2023/03/raspberry-pi-firewall-high-resolution-logo-480x360.png
-nimbo_mb_gallery_thumb_type:
-  - slider
-nimbo_mb_video_thumb_type:
-  - iframe
-nimbo_mb_audio_thumb_type:
-  - iframe
-nimbo_mb_link_target:
-  - blank
-categories:
-  - Internet of Things
-  - Security with IoT appliances
-tags:
-  - firewall
-  - iot
-  - ipfire
-  - raspberrypi
-
 ---
+
 This blog is based on my project for my bachelor&#8217;s degree back in 2019.
 
 The solution I will present to you is good for the people who value their information to be protected(home users) and small-scale businesses.
@@ -39,7 +19,7 @@ Before it begins, let&#8217;s look at what a firewall is**.**
 
 There are different kinds of firewalls. It can be a hardware, software or cloud firewall.
 
-## IPFire Firewall {.wp-block-heading}
+## IPFire Firewall
 
 IPFire is an open-source firewall, and it&#8217;s freely available. It gives freedom to modify the source code and configuration files. It is developed under the Linux distribution. It is based on stateful packet filtering and offers various features.
 
@@ -47,7 +27,7 @@ IPFire has a configurable web dashboard to control firewall features. A firewall
 
 IPFire has a package manager called &#8220;Pakfire&#8221;, and we can add add-ons such as Hostapd, watchdog, guardian, Who Is Online (WIO), etc…
 
-## Why Raspberry-pi? {.wp-block-heading}
+## Why Raspberry-pi?
 
 Raspberry Pi 3 b+ mini-computer can be used as the hardware component for the solution. Raspberry Pi has features required to build the IPFire firewall. A Broadcom BCM2887B0 processor powers it with an ARMv8 64-bit 1.4 GHz system on a chip. It has 1 GB LPDDR2 SDRAM and two network interfaces, which are 2.4GHz IEEE 802.11.b/g/n/ac Wireless LAN with 4.0 Bluetooth and a Gigabit Ethernet over USB 2.0 with a maximum throughput of 300 Mbps. It uses low electricity because it has a 5V/2.5A power input. It supports Power over Ethernet.
 
@@ -55,9 +35,9 @@ Raspberry Pi is a multipurpose, low-cost, and advanced mini-computer. It is smal
 
 Raspberry Pi does not have a real-time clock because it doesn&#8217;t have a backup battery. But IPFire has a Network Time Sensor to provide that facility.
 
-## Requirements {.wp-block-heading}
+## Requirements
 
-#### Hardware  {.wp-block-heading}
+#### Hardware
 
 <ul class="wp-block-list">
   <li>
@@ -92,7 +72,7 @@ Raspberry Pi does not have a real-time clock because it doesn&#8217;t have a bac
   </li>
 </ul>
 
-#### Software {.wp-block-heading}
+#### Software
 
 <ul class="wp-block-list">
   <li>
@@ -103,11 +83,11 @@ Raspberry Pi does not have a real-time clock because it doesn&#8217;t have a bac
   </li>
 </ul>
 
-## Network Architecture {.wp-block-heading}<figure class="wp-block-image size-full">
+## Network Architecture
 
 <img loading="lazy" decoding="async" width="711" height="441" src="https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup.png" alt="Network Setup" class="wp-image-282" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup.png 711w, https://vazdefense.com/wp-content/uploads/2022/10/Network-Setup-300x186.png 300w" sizes="(max-width: 711px) 100vw, 711px" /> </figure> 
 
-## Installation Process {.wp-block-heading}
+## Installation Process
 
 Download the latest IPFire ARM image and boot it into the SD Card using Raspberry Pi Imager.
 
@@ -117,7 +97,7 @@ Since we are using HDMI & USB Keyboard, edit the uENV.txt file and change SERIAL
 
 <img loading="lazy" decoding="async" width="852" height="801" src="https://vazdefense.com/wp-content/uploads/2022/10/Modified-configurations.png" alt="" class="wp-image-266" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Modified-configurations.png 852w, https://vazdefense.com/wp-content/uploads/2022/10/Modified-configurations-300x282.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Modified-configurations-768x722.png 768w" sizes="(max-width: 852px) 100vw, 852px" /> </figure> <figure class="wp-block-image size-full"><img loading="lazy" decoding="async" width="998" height="381" src="https://vazdefense.com/wp-content/uploads/2022/10/Serial-console-change.png" alt="" class="wp-image-320" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Serial-console-change.png 998w, https://vazdefense.com/wp-content/uploads/2022/10/Serial-console-change-300x115.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Serial-console-change-768x293.png 768w" sizes="(max-width: 998px) 100vw, 998px" /><figcaption class="wp-element-caption">_uEnv.txt file configuratio_n</figcaption></figure> 
 
-## Configuration Steps {.wp-block-heading}
+## Configuration Steps
 
 Insert the SD card into the Raspberry Pi. Prepare an external router to use as an access point with the green interface. Connect that router to the desired network port, which will be used as a green interface. The red interface should connect to the incoming connection. Our incoming source is the home router. Connect Raspberry Pi&#8217;s desired red interface port to the home router and power the Raspberry Pi on. We have to use an external monitor for the first time to configure the basics.
 
@@ -125,43 +105,43 @@ After first booting up, you will get the following screen:<figure class="wp-bloc
 
 <img loading="lazy" decoding="async" width="982" height="722" src="https://vazdefense.com/wp-content/uploads/2022/10/Keeyboard-mapping.png" alt="" class="wp-image-285" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Keeyboard-mapping.png 982w, https://vazdefense.com/wp-content/uploads/2022/10/Keeyboard-mapping-300x221.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Keeyboard-mapping-768x565.png 768w" sizes="(max-width: 982px) 100vw, 982px" /> </figure> 
 
-### Keyboard Mapping {.wp-block-heading}
+### Keyboard Mapping
 
 The first setup is the Keyboard layout. Select your desired keyboard setup and continue.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="1011" height="722" src="https://vazdefense.com/wp-content/uploads/2022/10/Keyboard-Layout.png" alt="" class="wp-image-286" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Keyboard-Layout.png 1011w, https://vazdefense.com/wp-content/uploads/2022/10/Keyboard-Layout-300x214.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Keyboard-Layout-768x548.png 768w" sizes="(max-width: 1011px) 100vw, 1011px" /> </figure> 
 
-### Timezone {.wp-block-heading}
+### Timezone
 
 The next setup is time zone. I use my current location&#8217;s time zone.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="955" height="722" src="https://vazdefense.com/wp-content/uploads/2022/10/Timezone-Berlin.png" alt="" class="wp-image-287" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Timezone-Berlin.png 955w, https://vazdefense.com/wp-content/uploads/2022/10/Timezone-Berlin-300x227.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Timezone-Berlin-768x581.png 768w" sizes="(max-width: 955px) 100vw, 955px" /> </figure> 
 
-### Hostname {.wp-block-heading}
+### Hostname
 
 Next is the hostname. Use a hostname as you desire, or continue with defaults.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="917" height="722" src="https://vazdefense.com/wp-content/uploads/2022/10/hostname-conf.png" alt="" class="wp-image-289" srcset="https://vazdefense.com/wp-content/uploads/2022/10/hostname-conf.png 917w, https://vazdefense.com/wp-content/uploads/2022/10/hostname-conf-300x236.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/hostname-conf-768x605.png 768w" sizes="(max-width: 917px) 100vw, 917px" /> </figure> 
 
-### Domain Name {.wp-block-heading}
+### Domain Name
 
 The following setup is the domain name. I will continue with defaults.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="932" height="722" src="https://vazdefense.com/wp-content/uploads/2022/10/domain-name-conf.png" alt="" class="wp-image-290" srcset="https://vazdefense.com/wp-content/uploads/2022/10/domain-name-conf.png 932w, https://vazdefense.com/wp-content/uploads/2022/10/domain-name-conf-300x232.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/domain-name-conf-768x595.png 768w" sizes="(max-width: 932px) 100vw, 932px" /> </figure> 
 
-### Networking {.wp-block-heading}
+### Networking
 
 These steps are the most critical setups in the firewall. Here, we have to configure the network configuration type, driver&#8217;s card assignment, and address settings.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="927" height="721" src="https://vazdefense.com/wp-content/uploads/2022/10/Networking-setup.png" alt="" class="wp-image-291" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Networking-setup.png 927w, https://vazdefense.com/wp-content/uploads/2022/10/Networking-setup-300x233.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Networking-setup-768x597.png 768w" sizes="(max-width: 927px) 100vw, 927px" /> </figure> 
 
-### Network configuration type {.wp-block-heading}
+### Network configuration type
 
 In this setup, I will use three interfaces (Red+Green+Blue). As I mentioned earlier, Red is used for incoming communications. Green and Blue are for outgoing communications in my setup.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="1007" height="723" src="https://vazdefense.com/wp-content/uploads/2022/10/Interfaces-assignment.png" alt="" class="wp-image-292" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Interfaces-assignment.png 1007w, https://vazdefense.com/wp-content/uploads/2022/10/Interfaces-assignment-300x215.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Interfaces-assignment-768x551.png 768w" sizes="(max-width: 1007px) 100vw, 1007px" /> </figure> 
 
-### Drivers and card assignments {.wp-block-heading}
+### Drivers and card assignments
 
 Raspberry Pi has two built-in network cards. I have used one extra network card with a USB to Ethernet network adapter.
 
@@ -169,7 +149,7 @@ I use network cards in my setup, as shown in the following image.<figure class="
 
 <img loading="lazy" decoding="async" width="1001" height="722" src="https://vazdefense.com/wp-content/uploads/2022/10/Network-card-assignment.png" alt="" class="wp-image-293" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Network-card-assignment.png 1001w, https://vazdefense.com/wp-content/uploads/2022/10/Network-card-assignment-300x216.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Network-card-assignment-768x554.png 768w" sizes="(max-width: 1001px) 100vw, 1001px" /> </figure> 
 
-### Address settings {.wp-block-heading}
+### Address settings
 
 I will configure the Red interface&#8217;s IP address to get an IP from the home router&#8217;s DHCP pool. Green interface as 10.10.10.1/24 and Blue interface as 10.20.20.1/24.<figure class="wp-block-image size-full">
 
@@ -177,7 +157,7 @@ I will configure the Red interface&#8217;s IP address to get an IP from the home
 
 After this window, you will see the DHCP setup for green and blue. Configure the DHCP range as you desire. I will use Google&#8217;s DNS for the secondary DNS. (This setup is not showing in the image. You can change this setting in anytime from the web interface)
 
-### Root and Admin Passwords {.wp-block-heading}
+### Root and Admin Passwords
 
 The next step is to set up the root password and admin password. You have to use the root password to connect to the firewall in the command line setup or when using SSH to connect to the firewall. The admin password is for the web configurator setup in IPFire&#8217;s web interface.
 
@@ -192,13 +172,13 @@ Use the admin username and password to log in.<figure class="wp-block-image size
 
 You can see the home screen with the configured interfaces.
 
-### IPFire Web Interface {.wp-block-heading}
+### IPFire Web Interface
 
 You can see the home screen with the configured interfaces.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="1291" height="542" src="https://vazdefense.com/wp-content/uploads/2022/10/main-page.png" alt="" class="wp-image-298" srcset="https://vazdefense.com/wp-content/uploads/2022/10/main-page.png 1291w, https://vazdefense.com/wp-content/uploads/2022/10/main-page-300x126.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/main-page-1024x430.png 1024w, https://vazdefense.com/wp-content/uploads/2022/10/main-page-768x322.png 768w" sizes="(max-width: 1291px) 100vw, 1291px" /> </figure> 
 
-### Blue Interface Setup, hostapd {.wp-block-heading}
+### Blue Interface Setup, hostapd
 
 We assigned a network card for the blue interface earlier. But to activate it, we have to install the &#8220;hostapd&#8221; add-on. You can install it using &#8220;Pakfire&#8221;.<figure class="wp-block-image size-full">
 
@@ -212,13 +192,13 @@ Now you will see both access points as follows in available wifi connections.<fi
 
 <img loading="lazy" decoding="async" width="217" height="105" src="https://vazdefense.com/wp-content/uploads/2022/10/Wifi-connections-from-ipfire.png" alt="" class="wp-image-302" /> </figure> 
 
-### IPFire&#8217;s default firewall behaviour {.wp-block-heading}
+### IPFire&#8217;s default firewall behaviour
 
 By default, IPFire allows in and out connections. You can change it by setting the following as &#8220;Blocked&#8221;.<figure class="wp-block-image size-full">
 
 <img loading="lazy" decoding="async" width="1211" height="302" src="https://vazdefense.com/wp-content/uploads/2022/10/Default-behaviour-of-firewall.png" alt="" class="wp-image-303" srcset="https://vazdefense.com/wp-content/uploads/2022/10/Default-behaviour-of-firewall.png 1211w, https://vazdefense.com/wp-content/uploads/2022/10/Default-behaviour-of-firewall-300x75.png 300w, https://vazdefense.com/wp-content/uploads/2022/10/Default-behaviour-of-firewall-1024x255.png 1024w, https://vazdefense.com/wp-content/uploads/2022/10/Default-behaviour-of-firewall-768x192.png 768w" sizes="(max-width: 1211px) 100vw, 1211px" /> </figure> 
 
-#### SSH access to the firewall {.wp-block-heading}
+#### SSH access to the firewall
 
 Configure the SSH settings as follows. After this, you can set up your Raspberry Pi anywhere and log in with root access to configure it in the terminal.<figure class="wp-block-image size-full">
 
@@ -230,9 +210,9 @@ SSH configuration from the web interface<figure class="wp-block-image size-full"
 
 Now, the firewall is up and running. We can test it by configuring some firewall rules.
 
-## Testing {.wp-block-heading}
+## Testing
 
-### Firewall rules {.wp-block-heading}
+### Firewall rules
 
 Firewall rules work with the top-to-bottom lineup. I have configured some of the basic firewall rules to test it.<figure class="wp-block-image size-full">
 
