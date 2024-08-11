@@ -53,7 +53,7 @@ Raspberry Pi does not have a real-time clock due to the absence of a backup batt
 
 ## Network Architecture
 
-![Network Setup](https://github.com/vvvasu/raspifire/blob/main/Network-Setup-300x186.png)
+![Network Setup](https://github.com/vvvasu/raspifire/blob/main/Network-Setup.png)
 
 ## Installation Process
 
