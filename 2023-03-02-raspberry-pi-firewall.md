@@ -26,7 +26,7 @@ IPFire has a package manager called "Pakfire," which allows us to add add-ons su
 
 ## Why Raspberry Pi?
 
-The Raspberry Pi 3 B+ mini-computer can be used as the hardware component for this solution. It has the necessary features to build the IPFire firewall. Powered by a Broadcom BCM2837B0 processor with an ARMv8 64-bit 1.4 GHz system on a chip, it has 1 GB of LPDDR2 SDRAM and two network interfaces: 2.4GHz IEEE 802.11.b/g/n/ac Wireless LAN with Bluetooth 4.0 and a Gigabit Ethernet over USB 2.0 with a maximum throughput of 300 Mbps. It consumes low power, requiring only a 5V/2.5A power input, and supports Power over Ethernet (PoE).
+The Raspberry Pi 3 B+ mini-computer can be used as the hardware component for this solution. It has the necessary features to build the IPFire firewall. Powered by a Broadcom BCM2837B0 processor with an ARMv8 64-bit 1.4 GHz system on a chip, it has 1 GB of LPDDR2 SDRAM and two network interfaces: 2.4GHz IEEE 802.11.b/g/n/ac Wireless LAN with Bluetooth 4.0 and a Gigabit Ethernet over USB 2.0 with a maximum throughput of 300 Mbps. It consumes low power, requires only a 5V/2.5A power input, and supports Power over Ethernet (PoE).
 
 Raspberry Pi is a multipurpose, low-cost, and advanced mini-computer, small in size like a credit card. It supports Linux-based operating systems. IPFire has been developed on Linux since version 2. It requires only a 1GHz CPU, 512MB RAM, and 4GB of memory storage. As a firewall needs inbound and outbound network interfaces, the Raspberry Pi provides that via wireless LAN and Gigabit Ethernet over USB 2.0.
 
@@ -64,9 +64,9 @@ The ARM flash image is configured for the serial console by default. Therefore, 
 
 Since we are using HDMI and a USB Keyboard, edit the `uENV.txt` file and change `SERIAL-CONSOLE=ON` to `OFF`, as shown in the image below.
 
-![Modified Configurations](https://vazdefense.com/wp-content/uploads/2022/10/Modified-configurations.png)
+![Modified Configurations](https://github.com/vvvasu/raspifire/blob/main/Modified-configurations.png)
 
-![Serial Console Change](https://vazdefense.com/wp-content/uploads/2022/10/Serial-console-change.png)
+![Serial Console Change](https://github.com/vvvasu/raspifire/blob/main/Serial-console-change.png)
 
 ## Configuration Steps
 
@@ -74,43 +74,43 @@ Insert the SD card into the Raspberry Pi. Prepare an external router to use as a
 
 Upon the first boot, you will see the following screen:
 
-![Keyboard Mapping](https://vazdefense.com/wp-content/uploads/2022/10/Keeyboard-mapping.png)
+![Keyboard Mapping](https://github.com/vvvasu/raspifire/blob/main/Keeyboard-mapping.png)
 
 ### Keyboard Mapping
 
 The first setup is the Keyboard layout. Select your desired keyboard setup and continue.
 
-![Keyboard Layout](https://vazdefense.com/wp-content/uploads/2022/10/Keyboard-Layout.png)
+![Keyboard Layout](https://github.com/vvvasu/raspifire/blob/main/Keyboard-Layout.png)
 
 ### Timezone
 
 The next setup is the time zone. Use your current location's time zone.
 
-![Timezone](https://vazdefense.com/wp-content/uploads/2022/10/Timezone-Berlin.png)
+![Timezone](https://github.com/vvvasu/raspifire/blob/main/Timezone-Berlin.png)
 
 ### Hostname
 
 Next, set up the hostname. You can use a custom hostname or continue with the default.
 
-![Hostname](https://vazdefense.com/wp-content/uploads/2022/10/hostname-conf.png)
+![Hostname](https://github.com/vvvasu/raspifire/blob/main/hostname-conf.png)
 
 ### Domain Name
 
 The next setup is the domain name. I will continue with the default settings.
 
-![Domain Name](https://vazdefense.com/wp-content/uploads/2022/10/domain-name-conf.png)
+![Domain Name](https://github.com/vvvasu/raspifire/blob/main/domain-name-conf.png)
 
 ### Networking
 
 These steps involve the most critical setup in the firewall: configuring the network type, driver assignments, and address settings.
 
-![Networking Setup](https://vazdefense.com/wp-content/uploads/2022/10/Networking-setup.png)
+![Networking Setup](https://github.com/vvvasu/raspifire/blob/main/Networking-setup.png)
 
 ### Network Configuration Type
 
 In this setup, I will use three interfaces (Red, Green, and Blue). As mentioned earlier, Red is used for incoming communications, while Green and Blue are for outgoing communications.
 
-![Interfaces Assignment](https://vazdefense.com/wp-content/uploads/2022/10/Interfaces-assignment.png)
+![Interfaces Assignment](https://github.com/vvvasu/raspifire/blob/main/Interfaces-assignment.png)
 
 ### Drivers and Card Assignments
 
@@ -118,17 +118,17 @@ The Raspberry Pi has two built-in network cards. I have used an additional netwo
 
 I assigned the network cards as shown in the image below.
 
-![Network Card Assignment](https://vazdefense.com/wp-content/uploads/2022/10/Network-card-assignment.png)
+![Network Card Assignment](https://github.com/vvvasu/raspifire/blob/main/Network-card-assignment.png)
 
 ### Address Settings
 
 I configured the Red interface's IP address to get an IP from the home router's DHCP pool. The Green interface is set as `10.10.10.1/24`, and the Blue interface as `10.20.20.1/24`.
 
-![Red Interface IP Address Setting](https://vazdefense.com/wp-content/uploads/2022/10/IP-add-config-for-RED.png)
+![Red Interface IP Address Setting](https://github.com/vvvasu/raspifire/blob/main/IP-add-config-for-RED.png)
 
-![Green Interface IP Address Setting](https://vazdefense.com/wp-content/uploads/2022/10/IP-add-config-for-Green.png)
+![Green Interface IP Address Setting](https://github.com/vvvasu/raspifire/blob/main/IP-add-config-for-Green.png)
 
-![Blue Interface IP Address Setting](https://vazdefense.com/wp-content/uploads/2022/10/Int-blue-configuration.png)
+![Blue Interface IP Address Setting](https://github.com/vvvasu/raspifire/blob/main/Int-blue-configuration.png)
 
 After this, you will see the DHCP setup for the Green and Blue interfaces. Configure the DHCP range as desired. I use Google's DNS for the secondary DNS. (This setup is not shown in the image but can be changed anytime from the web interface.)
 
@@ -143,43 +143,43 @@ Access the web configurator using the interface IP address. For the first-time s
 
 Use the admin username and password to log in.
 
-![IPFire Web Interface Login](https://vazdefense.com/wp-content/uploads/2022/10/web-configurator-login.png)
+![IPFire Web Interface Login](https://github.com/vvvasu/raspifire/blob/main/web-configurator-login.png)
 
 ### IPFire Web Interface
 
 You will see the home screen with the configured interfaces.
 
-![IPFire Main Page](https://vazdefense.com/wp-content/uploads/2022/10/main-page.png)
+![IPFire Main Page](https://github.com/vvvasu/raspifire/blob/main/main-page.png)
 
 ### Blue Interface Setup: hostapd
 
 We assigned a network card for the blue interface earlier. To activate it, we need to install the "hostapd" add-on. You can install it using "Pakfire."
 
-![Installed hostapd](https://vazdefense.com/wp-content/uploads/2022/10/Installed-hostapd.png)
+![Installed hostapd](https://github.com/vvvasu/raspifire/blob/main/Installed-hostapd.png)
 
 After installation, you will see a new add-on page called "WLAN AP" under "Pakfire." Configure the settings as follows and activate the Blue interface's access point.
 
-![WLAN AP Configuration](https://vazdefense.com/wp-content/uploads/2022/10/Wlan-AP-configuration.png)
+![WLAN AP Configuration](https://github.com/vvvasu/raspifire/blob/main/Wlan-AP-configuration.png)
 
 Now you will see both access points available in the Wi-Fi connections.
 
-![Wi-Fi Connections from IPFire](https://vazdefense.com/wp-content/uploads/2022/10/Wifi-connections-from-ipfire.png)
+![Wi-Fi Connections from IPFire](https://github.com/vvvasu/raspifire/blob/main/Wifi-connections-from-ipfire.png)
 
 ### IPFire's Default Firewall Behavior
 
 By default, IPFire allows incoming and outgoing connections. You can change this by setting it to "Blocked."
 
-![Default Firewall Behavior](https://vazdefense.com/wp-content/uploads/2022/10/Default-behaviour-of-firewall.png)
+![Default Firewall Behavior](https://github.com/vvvasu/raspifire/blob/main/Default-behaviour-of-firewall.png)
 
 ### SSH Access to the Firewall
 
 Configure the SSH settings as follows. After this, you can set up your Raspberry Pi anywhere and log in with root access to configure it in the terminal.
 
-![SSH Configuration](https://vazdefense.com/wp-content/uploads/2022/10/SSH-configuration-1.png)
+![SSH Configuration](https://github.com/vvvasu/raspifire/blob/main/SSH-configuration-1.png)
 
 SSH configuration from the web interface.
 
-![Interfaces Summary](https://vazdefense.com/wp-content/uploads/2022/10/Interfaces-as-a-summary.png)
+![Interfaces Summary](https://github.com/vvvasu/raspifire/blob/main/Interfaces-as-a-summary.png)
 
 Now, the firewall is up and running. We can test it by configuring some firewall rules.
 
@@ -189,20 +189,20 @@ Now, the firewall is up and running. We can test it by configuring some firewall
 
 Firewall rules work with a top-to-bottom lineup. I have configured some basic firewall rules to test it.
 
-![Firewall Rules](https://vazdefense.com/wp-content/uploads/2022/10/Firewall-rules.png)
+![Firewall Rules](https://github.com/vvvasu/raspifire/blob/main/Firewall-rules.png)
 
 The first firewall rule denies SSH access from the `10.20.20.4` PC in the Blue interface to the `10.10.10.3` PC in the Green interface. This will result in a timeout error since the rule denies the connection.
 
-![SSH Denied](https://vazdefense.com/wp-content/uploads/2022/10/SSH-from-kali@kali.png)
+![SSH Denied](https://github.com/vvvasu/raspifire/blob/main/SSH-from-kali@kali.png)
 
 The next two firewall rules test telnet access by blocking port 1337 from `10.10.10.3` to `10.20.20.4` and allowing telnet access on port 1667 from `10.10.10.3` to `10.20.20.4`. The second rule denies access, while the third rule allows it, as shown in the following images.
 
-![Telnet Denied](https://vazdefense.com/wp-content/uploads/2022/10/Telnet-from-vasu@kali.png)
+![Telnet Denied](https://github.com/vvvasu/raspifire/blob/main/Telnet-from-vasu@kali.png)
 
-![Ping from Blue Interface](https://vazdefense.com/wp-content/uploads/2022/10/ping-from-kali@kali.png)
+![Ping from Blue Interface](https://github.com/vvvasu/raspifire/blob/main/ping-from-kali@kali.png)
 
 In addition to the above rules, the firewall allows access to any connections between interfaces.
 
-![Ping from Blue Interface](https://vazdefense.com/wp-content/uploads/2022/10/ping-from-kali@kali-1.png)
+![Ping from Blue Interface](https://github.com/vvvasu/raspifire/blob/main/ping-from-kali@kali-1.png)
 
-**There are more blogs related to the Raspberry Pi firewall to come. Stay tuned 🙂**
+
