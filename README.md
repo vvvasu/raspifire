@@ -199,8 +199,6 @@ The next two firewall rules test telnet access by blocking port 1337 from `10.10
 
 ![Telnet Denied](https://github.com/vvvasu/raspifire/blob/main/Telnet-from-vasu@kali.png)
 
-![Ping from Blue Interface](https://github.com/vvvasu/raspifire/blob/main/ping-from-kali@kali.png)
-
 In addition to the above rules, the firewall allows access to any connections between interfaces.
 
 ![Ping from Blue Interface](https://github.com/vvvasu/raspifire/blob/main/ping-from-kali@kali-1.png)
